@@ -79,14 +79,84 @@ The main features of LPC2148 include the following.
 
 
 ## STM 32 CUBE PROGRAM :
+# Program for arithmetic operation:
+```
+org 100h
 
+MOV AX, 0445H
+MOV BX, 0033H
+ADD AX, BX
+MOV [5000H], AX
 
+MOV AX, 0F345H
+MOV CX, 2222H
+SUB AX, CX
+MOV [5002H], AX
+
+MOV AX, 0123H
+MOV BX, 0009H
+MUL BX
+MOV [5004H], AX
+
+MOV AX, 0FFFFH
+MOV CX, 0003H
+DIV CX
+MOV [5006H], AX
+
+ret
+
+```
 
 ## Output  :
- 
- 
- 
- 
+
+ <img width="1133" height="747" alt="image" src="https://github.com/user-attachments/assets/cd7f4711-5162-4c36-acae-33d34ffe1fec" />
+
+<img width="815" height="239" alt="image" src="https://github.com/user-attachments/assets/2c1b7708-0777-4f00-8ce4-ca2bf4c1d25f" />
+
+
+# Program for logical operation:
+```
+org 100h
+
+MOV AX, 4456H
+MOV BX, 0333H
+AND AX, BX
+MOV [5000H], AX
+
+MOV AX, 0F345H
+MOV CX, 2222H
+OR AX, CX
+MOV [5002H], AX
+
+MOV AX, 1234H
+NOT AX
+MOV [5004H], AX
+
+MOV AX, 0FFFFH
+MOV BX, 0003H
+AND AX, BX
+NOT AX
+MOV [5006H], AX
+
+MOV AX, 00F0H
+MOV CX, 0003H
+OR AX, CX
+NOT AX
+MOV [5008H], AX
+
+RET
+```
+
+## Output :
+
+
+
+<img width="1067" height="705" alt="image" src="https://github.com/user-attachments/assets/2c2103eb-43b3-4292-b051-d4a8c7048623" />
+
+
+ <img width="806" height="237" alt="image" src="https://github.com/user-attachments/assets/c97992ba-31c2-4e29-88b8-1f25117a095a" />
+
+
 ## Result :
 Interfacing a digital output with ARM microcontroller is executed and the results are verified.
 
